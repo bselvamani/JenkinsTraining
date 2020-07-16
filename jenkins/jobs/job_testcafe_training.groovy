@@ -12,8 +12,7 @@ job("My-TestCafe-Training-Job") {
     keepDependencies(false)
 
     parameters {
-        choiceParam("Browser", ["Chrome", "FireFox"], "Please select the browser")
-        choiceParam("Headless", ["True", "False"], "Please select the browser type")
+        choiceParam("TestScripts", ["test:chrome", "test:chrome:headless", "test:chrome:iphone", "test:chrome:android", "test:safari"], "Please select the test scripts to execute...")
     }
 
     scm {
@@ -33,7 +32,7 @@ job("My-TestCafe-Training-Job") {
     }
 
     steps {
-        shell("npm install testcafe test:chrome")
+        shell("npm run \${TestScripts}")
     }
 
     publishers {
