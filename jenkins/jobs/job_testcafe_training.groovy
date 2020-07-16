@@ -12,8 +12,8 @@ job("My-TestCafe-Training-Job") {
     keepDependencies(false)
 
     parameters {
-        choiceParam("Browser:  ", ["Chrome", "FireFox"], "Please select the browser")
-        choiceParam("Headless: ", ["True", "False"], "Please select the browser type")
+        choiceParam("Browser", ["Chrome", "FireFox"], "Please select the browser")
+        choiceParam("Headless", ["True", "False"], "Please select the browser type")
     }
 
     scm {

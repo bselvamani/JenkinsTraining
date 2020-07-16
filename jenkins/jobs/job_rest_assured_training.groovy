@@ -30,7 +30,7 @@ job("My-RestAssured-Training-Job") {
 
     steps {
         maven {
-            goals("mvn test -PapiTest ")
+            goals("mvn clean test -PapiTest ")
             mavenOpts("maven3.6")
         }
     }

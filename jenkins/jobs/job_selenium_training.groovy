@@ -13,8 +13,8 @@ job("My-Selenium-Training-Job") {
     keepDependencies(false)
 
     parameters {
-        choiceParam("Browser:  ", ["Chrome", "FireFox"], "Please select the browser")
-        choiceParam("Headless: ", ["True", "False"], "Please select the browser type")
+        choiceParam("Browser", ["Chrome", "FireFox"], "Please select the browser")
+        choiceParam("Headless", ["True", "False"], "Please select the browser type")
     }
 
     scm {
@@ -35,7 +35,7 @@ job("My-Selenium-Training-Job") {
 
     steps {
         gradle {
-            tasks("clean testNGTest -Dbrowser=\${Browser} -Dheadless=\${Headless}")
+            tasks("clean build testNGTest -Dbrowser=\${Browser} -Dheadless=\${Headless}")
             gradleName("gradle3.5")
             useWrapper(false)
             makeExecutable(false)

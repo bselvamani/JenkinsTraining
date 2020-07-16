@@ -36,7 +36,7 @@ job("My-Selenium-Grid-Training-Job") {
 
     steps {
         gradle {
-            tasks("clean testNGTest -Dgrid=\${Grid} -Dbrowser=\${Browser} -Dheadless=\${Headless}")
+            tasks("clean build testNGTest -Dgrid=\${Grid} -Dbrowser=\${Browser} -Dheadless=\${Headless}")
             gradleName("gradle3.5")
             useWrapper(false)
             makeExecutable(false)

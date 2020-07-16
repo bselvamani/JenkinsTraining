@@ -36,7 +36,7 @@ job("My-Appium-Android-Training-Job") {
 
     steps {
         gradle {
-            tasks("clean android${Application}Test")
+            tasks("clean build android\${Application}Test")
             gradleName("gradle3.5")
             useWrapper(false)
             makeExecutable(false)
