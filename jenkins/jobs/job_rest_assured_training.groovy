@@ -1,4 +1,3 @@
-
 job("My-RestAssured-Training-Job") {
 
     logRotator {
@@ -30,8 +29,8 @@ job("My-RestAssured-Training-Job") {
 
     steps {
         maven {
-            goals("mvn clean test -PapiTest ")
-            mavenOpts("maven3.6")
+            mavenInstallation("Maven3.6")
+            goals("clean test -PapiTest")
         }
     }
 
