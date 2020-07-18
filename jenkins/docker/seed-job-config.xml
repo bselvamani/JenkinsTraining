@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- 1. My-Seed-Job -->
+<project>
+    <actions></actions>
+    <description></description>
+    <keepDependencies>false</keepDependencies>
+    <properties></properties>
+    <canRoam>true</canRoam>
+    <disabled>false</disabled>
+    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+    <triggers></triggers>
+    <concurrentBuild>false</concurrentBuild>
+    <builders>
+        <javaposse.jobdsl.plugin.ExecuteDslScripts>
+            <usingScriptText>false</usingScriptText>
+            <targets>**/job*.groovy</targets>
+            <ignoreExisting>false</ignoreExisting>
+            <removedJobAction>IGNORE</removedJobAction>
+            <removedViewAction>IGNORE</removedViewAction>
+            <lookupStrategy>JENKINS_ROOT</lookupStrategy>
+            <additionalClasspath></additionalClasspath>
+        </javaposse.jobdsl.plugin.ExecuteDslScripts>
+    </builders>
+    <publishers></publishers>
+    <buildWrappers>
+        <hudson.plugins.ws__cleanup.PreBuildCleanup>
+            <patterns></patterns>
+            <deleteDirs>false</deleteDirs>
+            <cleanupParameter></cleanupParameter>
+            <externalDelete></externalDelete>
+        </hudson.plugins.ws__cleanup.PreBuildCleanup>
+    </buildWrappers>
+    <logRotator>
+        <daysToKeep>30</daysToKeep>
+        <numToKeep>-1</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+    </logRotator>
+    <scm class='hudson.plugins.git.GitSCM'>
+        <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+                <url>https://github.com/bselvamani/JenkinsTraining.git</url>
+            </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+            <hudson.plugins.git.BranchSpec>
+                <name>*/master</name>
+            </hudson.plugins.git.BranchSpec>
+        </branches>
+        <configVersion>2</configVersion>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <gitTool>Default</gitTool>
+    </scm>
+</project>

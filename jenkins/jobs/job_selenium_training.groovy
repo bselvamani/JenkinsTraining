@@ -36,7 +36,7 @@ job("My-Selenium-Training-Job") {
     steps {
         gradle {
             tasks("clean build testNGTest -Dbrowser=\${Browser} -Dheadless=\${Headless}")
-            gradleName("gradle3.5")
+            /*gradleName("gradle3.5")*/
             useWrapper(false)
             makeExecutable(false)
             useWorkspaceAsHome(false)
