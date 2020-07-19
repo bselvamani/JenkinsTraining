@@ -12,8 +12,8 @@ email-ext
 ghprb
 git
 github
-maven
-gradle
+maven 3.6.3
+gradle 6.5
 groovy-postbuild
 job-dsl
 parameterized-trigger

@@ -37,7 +37,7 @@ job("My-Appium-IOS-Training-Job") {
     steps {
         gradle {
             tasks("clean build ios\${Application}Test")
-            /*gradleName("gradle3.5")*/
+            gradleName("Gradle 6.5")
             useWrapper(false)
             makeExecutable(false)
             useWorkspaceAsHome(false)
